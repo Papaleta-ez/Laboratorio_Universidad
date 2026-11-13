@@ -1,0 +1,102 @@
+package ni.edu.uam.proyectolaboratorio.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "equipo", schema = "laboratorio")
+public class Equipo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_equipo")
+    private long id;
+
+    @Column(name = "codigo", nullable = false, unique = true, length = 30)
+    private String codigo;
+
+    @Column(name = "nombre", nullable = false, length = 150)
+    private String nombre;
+
+    @Column(name = "marca", length = 100)
+    private String marca;
+
+    @Column(name = "estado", nullable = false, length = 30)
+    private String estado;
+
+    @Column(name = "cantidad")
+    private Integer cantidad;
+
+    @ManyToOne
+    @JoinColumn(name = "id_tipo", nullable = false)
+    private TipoEquipo tipoEquipo;
+
+    public Equipo() {
+    }
+
+    public Equipo(long id, String codigo, String nombre, String marca,
+                  String estado, Integer cantidad, TipoEquipo tipoEquipo) {
+        this.id = id;
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.marca = marca;
+        this.estado = estado;
+        this.cantidad = cantidad;
+        this.tipoEquipo = tipoEquipo;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public Integer getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public TipoEquipo getTipoEquipo() {
+        return tipoEquipo;
+    }
+
+    public void setTipoEquipo(TipoEquipo tipoEquipo) {
+        this.tipoEquipo = tipoEquipo;
+    }
+}
+
