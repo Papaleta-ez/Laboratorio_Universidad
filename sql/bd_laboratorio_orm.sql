@@ -1,11 +1,8 @@
--- PARTE 1: ejecutar conectado a la base postgres.
--- Si bd_laboratorio_orm ya existe, no ejecutar esta parte.
+
+
 CREATE DATABASE bd_laboratorio_orm
     WITH ENCODING 'UTF8'
     TEMPLATE template0;
-
--- PARTE 2: abrir Query Tool conectado a bd_laboratorio_orm.
--- Ejecutar desde aqui hasta el final solo una vez en una base vacia.
 
 CREATE SCHEMA IF NOT EXISTS laboratorio;
 
