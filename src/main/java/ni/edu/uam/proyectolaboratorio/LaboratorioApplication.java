@@ -19,7 +19,7 @@ public class LaboratorioApplication extends Application {
         if (System.getenv("DB_PASSWORD") == null || System.getenv("DB_PASSWORD").isBlank()) {
             Dialog<String> dialogo = new Dialog<>();
             dialogo.setTitle("Conectar a PostgreSQL");
-            dialogo.setHeaderText("Contraseña del usuario postgres para bd_universidad");
+            dialogo.setHeaderText("Contraseña del usuario postgres para bd_laboratorio_orm");
             PasswordField campoPassword = new PasswordField();
             campoPassword.setPromptText("Contraseña");
             dialogo.getDialogPane().setContent(campoPassword);
@@ -36,7 +36,7 @@ public class LaboratorioApplication extends Application {
             JPAUtil.iniciar();
         } catch (RuntimeException ex) {
             Alert alerta = new Alert(Alert.AlertType.ERROR,
-                    "No se pudo abrir bd_universidad. Revise PostgreSQL y la contraseña.");
+                    "No se pudo abrir bd_laboratorio_orm. Revise PostgreSQL y la contraseña.");
             alerta.setHeaderText("Error de conexión");
             alerta.showAndWait();
             return;

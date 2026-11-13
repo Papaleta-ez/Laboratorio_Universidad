@@ -1,4 +1,4 @@
--- Ejecutar conectado a bd_universidad.
+-- Ejecutar conectado a bd_laboratorio_orm.
 
 -- Esquema
 CREATE SCHEMA IF NOT EXISTS laboratorio;

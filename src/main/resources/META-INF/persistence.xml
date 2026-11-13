@@ -6,7 +6,7 @@
         <class>ni.edu.uam.proyectolaboratorio.model.TipoEquipo</class>
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/bd_universidad"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/bd_laboratorio_orm"/>
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>
             <property name="hibernate.hbm2ddl.auto" value="validate"/>
             <property name="hibernate.show_sql" value="false"/>
